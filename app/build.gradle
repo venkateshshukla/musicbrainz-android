@@ -42,13 +42,13 @@ android {
 dependencies {
 	compile project(':api')
 	compile 'com.android.support:support-v4:21.0.0'
+	compile 'com.android.support:appcompat-v7:21.0.0'
 	compile 'org.musicbrainz.mobile:api:1.0-SNAPSHOT'
 	compile 'com.novoda.imageloader:imageloader-core:1.5.7'
 	compile 'com.google.code.gson:gson:2.2.4'
 	// Paypal MPL jar is added in this way. Doing this via maven repo was
 	// becoming too troublesome
 	compile rootProject.files('deployer/PayPal_MPL-1.5.6.46.jar')
-	compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
 	// viewpagerindicator by Jake Wharton does not contain aar version
 	// this repo repackages the apklib provided in the original to aar
 	compile 'fr.avianey.com.viewpagerindicator:library:2.4.1@aar'

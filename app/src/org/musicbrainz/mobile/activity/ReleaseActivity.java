@@ -40,6 +40,8 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.LoaderManager.LoaderCallbacks;
 import android.support.v4.content.Loader;
+import android.support.v4.view.MenuCompat;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -48,10 +50,10 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.view.Window;
-import com.actionbarsherlock.widget.ShareActionProvider;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.Window;
+import android.support.v7.widget.ShareActionProvider;
 import com.viewpagerindicator.TabPageIndicator;
 
 /**
@@ -181,11 +183,12 @@ public class ReleaseActivity extends MusicBrainzActivity implements AddToCollect
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         if (App.isUserLoggedIn()) {
-            getSupportMenuInflater().inflate(R.menu.release_logged_in, menu);
+            getMenuInflater().inflate(R.menu.release_logged_in, menu);
         } else {
-            getSupportMenuInflater().inflate(R.menu.release, menu);
+            getMenuInflater().inflate(R.menu.release, menu);
         }
-        ShareActionProvider actionProvider = (ShareActionProvider) menu.findItem(R.id.action_share).getActionProvider();
+        MenuItem item = menu.findItem(R.id.action_share);
+        ShareActionProvider actionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(item);
         actionProvider.setShareHistoryFileName(ShareActionProvider.DEFAULT_SHARE_HISTORY_FILE_NAME);
         actionProvider.setShareIntent(Utils.shareIntent(Configuration.RELEASE_SHARE + releaseMbid));
         return true;

@@ -7,8 +7,8 @@ import org.musicbrainz.mobile.intent.IntentFactory.Extra;
 
 import android.os.Bundle;
 
-import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.view.Window;
+import android.view.MenuItem;
+import android.view.Window;
 
 public class CollectionActivity extends MusicBrainzActivity implements FragmentLoadingCallbacks {
 

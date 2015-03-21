@@ -10,11 +10,12 @@ import org.musicbrainz.mobile.async.CollectionLoader;
 import org.musicbrainz.mobile.async.result.AsyncResult;
 import org.musicbrainz.mobile.intent.IntentFactory.Extra;
 
-import com.actionbarsherlock.app.SherlockListFragment;
-import com.actionbarsherlock.view.ActionMode;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
+import android.support.v4.app.ListFragment;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.view.ActionMode;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import android.app.Activity;
 import android.content.Context;
@@ -32,7 +33,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class CollectionFragment extends SherlockListFragment {
+public class CollectionFragment extends ListFragment {
 
     private static final String RELEASE_MBID = "releaseMbid";
     private static final int COLLECTION_LOADER = 0;
@@ -129,7 +130,7 @@ public class CollectionFragment extends SherlockListFragment {
                 return false;
             }
             getListView().setItemChecked(position, true);
-            getSherlockActivity().startActionMode(new RemoveReleasesActionMode());
+            ((ActionBarActivity) getActivity()).startSupportActionMode(new RemoveReleasesActionMode());
             return true;
         }
     };

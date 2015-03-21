@@ -5,7 +5,7 @@ import org.musicbrainz.mobile.fragment.BarcodeSearchFragment.LoadingCallbacks;
 
 import android.os.Bundle;
 
-import com.actionbarsherlock.view.Window;
+import android.view.Window;
 
 /**
  * Activity to submit a barcode to a selected release in MusicBrainz.

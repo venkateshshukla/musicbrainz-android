@@ -20,16 +20,18 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.LoaderManager.LoaderCallbacks;
 import android.support.v4.content.Loader;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.Window;
-import com.actionbarsherlock.widget.ShareActionProvider;
+import android.view.Menu;
+import android.view.Window;
+import android.support.v7.widget.ShareActionProvider;
 import com.viewpagerindicator.TabPageIndicator;
 
 /**
@@ -106,8 +108,9 @@ public class ArtistActivity extends MusicBrainzActivity implements LoaderCallbac
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getSupportMenuInflater().inflate(R.menu.artist, menu);
-        ShareActionProvider actionProvider = (ShareActionProvider) menu.findItem(R.id.action_share).getActionProvider();
+        getMenuInflater().inflate(R.menu.artist, menu);
+        MenuItem item = menu.getItem(R.id.action_share);
+        ShareActionProvider actionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(item);
         actionProvider.setShareHistoryFileName(ShareActionProvider.DEFAULT_SHARE_HISTORY_FILE_NAME);
         actionProvider.setShareIntent(Utils.shareIntent(Configuration.ARTIST_SHARE + mbid));
         return true;

@@ -34,7 +34,7 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.actionbarsherlock.view.Menu;
+import android.view.Menu;
 import com.viewpagerindicator.TabPageIndicator;
 
 /**
@@ -208,7 +208,7 @@ public class SearchActivity extends MusicBrainzActivity implements LoaderCallbac
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getSupportMenuInflater().inflate(R.menu.search, menu);
+        getMenuInflater().inflate(R.menu.search, menu);
         return true;
     }
 

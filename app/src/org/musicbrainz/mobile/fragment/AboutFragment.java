@@ -4,9 +4,9 @@ import org.musicbrainz.mobile.App;
 import org.musicbrainz.mobile.R;
 import org.musicbrainz.mobile.view.HtmlAssetTextView;
 
-import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
+import android.support.v4.app.Fragment;
+import android.view.Menu;
+import android.view.MenuInflater;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,7 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class AboutFragment extends SherlockFragment {
+public class AboutFragment extends Fragment {
     
     private TextView versionLabel;
     

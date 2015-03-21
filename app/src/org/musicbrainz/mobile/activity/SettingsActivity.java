@@ -1,7 +1,7 @@
 package org.musicbrainz.mobile.activity;
 
 import com.actionbarsherlock.app.SherlockPreferenceActivity;
-import com.actionbarsherlock.view.MenuItem;
+import android.view.MenuItem;
 import org.musicbrainz.mobile.R;
 import org.musicbrainz.mobile.intent.IntentFactory;
 import org.musicbrainz.mobile.suggestion.SuggestionProvider;

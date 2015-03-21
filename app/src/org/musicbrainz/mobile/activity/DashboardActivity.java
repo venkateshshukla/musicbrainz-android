@@ -17,8 +17,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
+import android.view.Menu;
+import android.view.MenuItem;
 import com.paypal.android.MEP.PayPal;
 
 public class DashboardActivity extends MusicBrainzActivity implements OnClickListener {
@@ -59,7 +59,7 @@ public class DashboardActivity extends MusicBrainzActivity implements OnClickLis
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getSupportMenuInflater().inflate(R.menu.dash, menu);
+        getMenuInflater().inflate(R.menu.dash, menu);
         return true;
     }
 

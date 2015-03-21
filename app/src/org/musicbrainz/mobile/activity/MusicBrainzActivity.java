@@ -9,10 +9,10 @@ import android.content.ActivityNotFoundException;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.MenuItem;
+import android.support.v7.app.ActionBarActivity;
+import android.view.MenuItem;
 
-public abstract class MusicBrainzActivity extends SherlockFragmentActivity {
+public abstract class MusicBrainzActivity extends ActionBarActivity {
     
     @Override
     public void onCreate(Bundle savedInstanceState) {

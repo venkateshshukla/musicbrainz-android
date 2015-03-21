@@ -5,7 +5,7 @@ import org.musicbrainz.mobile.fragment.DonateFragment.DonationCallbacks;
 
 import android.os.Bundle;
 
-import com.actionbarsherlock.view.Window;
+import android.view.Window;
 
 public class DonateActivity extends MusicBrainzActivity implements DonationCallbacks {
 

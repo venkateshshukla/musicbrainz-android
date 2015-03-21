@@ -6,7 +6,7 @@ import org.musicbrainz.mobile.intent.IntentFactory.Extra;
 
 import android.os.Bundle;
 
-import com.actionbarsherlock.view.Window;
+import android.view.Window;
 
 public class WebActivity extends MusicBrainzActivity implements WebFragmentCallbacks {
 

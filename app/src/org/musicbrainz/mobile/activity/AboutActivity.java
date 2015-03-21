@@ -4,7 +4,7 @@ import org.musicbrainz.mobile.R;
 
 import android.os.Bundle;
 
-import com.actionbarsherlock.view.Menu;
+import android.view.Menu;
 
 public class AboutActivity extends MusicBrainzActivity {
 
@@ -17,7 +17,7 @@ public class AboutActivity extends MusicBrainzActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getSupportMenuInflater().inflate(R.menu.about, menu);
+        getMenuInflater().inflate(R.menu.about, menu);
         return true;
     }
 
