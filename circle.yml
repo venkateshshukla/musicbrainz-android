@@ -9,7 +9,7 @@ test:
         parallel: true
     - circle-android wait-for-boot
     - ./gradlew connectedAndroidTest
-    - cp -r musicbrainz-android/app/build/outputs $CIRCLE_ARTIFACTS
-    - cp -r musicbrainz-android/app/build/outputs/reports/androidTests/connected/* $CIRCLE_TEST_REPORTS/html
-    - cp -r musicbrainz-android/app/build/outputs/androidTest-results/connected/* $CIRCLE_TEST_REPORTS/xml
+    - cp -r app/build/outputs $CIRCLE_ARTIFACTS
+    - cp -r app/build/outputs/reports/androidTests/connected/* $CIRCLE_TEST_REPORTS/html
+    - cp -r app/build/outputs/androidTest-results/connected/* $CIRCLE_TEST_REPORTS/xml
 
