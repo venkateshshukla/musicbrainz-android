@@ -4,8 +4,8 @@ dependencies:
 
 test:
   override:
-    - emulator -avd circleci-android21 -no-audio -no-window:
-        backgroud: true
+    - emulator -avd circleci-android21 -no-window -no-boot-anim -no-audio:
+        background: true
         parallel: true
     - circle-android wait-for-boot
     - ./gradlew connectedAndroidTest
