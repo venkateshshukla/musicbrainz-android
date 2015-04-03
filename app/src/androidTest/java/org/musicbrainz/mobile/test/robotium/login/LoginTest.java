@@ -7,7 +7,7 @@ import org.musicbrainz.mobile.test.robotium.Account;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.LargeTest;
 
-import com.jayway.android.robotium.solo.Solo;
+import com.robotium.solo.Solo;
 
 public class LoginTest extends ActivityInstrumentationTestCase2<LoginActivity> {
 

@@ -10,7 +10,7 @@ import org.musicbrainz.mobile.activity.SettingsActivity;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.LargeTest;
 
-import com.jayway.android.robotium.solo.Solo;
+import com.robotium.solo.Solo;
 
 public class DashboardNavigationTest extends ActivityInstrumentationTestCase2<DashboardActivity> {
 
