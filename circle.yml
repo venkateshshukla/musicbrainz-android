@@ -4,12 +4,17 @@ dependencies:
 
 test:
   override:
-    - emulator -avd circleci-android21 -no-window -no-boot-anim -no-audio:
+    - emulator -avd circleci-android21 -no-window -no-boot-anim -no-audio -no-skin:
         background: true
         parallel: true
     - circle-android wait-for-boot
-    - ./gradlew connectedAndroidTest -PdisablePreDex
+    - ./gradlew build installDebug connectedCheck -PdisablePreDex
     - cp -r app/build/outputs $CIRCLE_ARTIFACTS
     - cp -r app/build/outputs/reports/androidTests/connected/* $CIRCLE_TEST_REPORTS
     - cp -r app/build/outputs/androidTest-results/connected/* $CIRCLE_TEST_REPORTS
 
+general:
+  branches:
+    ignore:
+      - gh-pages
+      - travis
